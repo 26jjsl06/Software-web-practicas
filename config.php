@@ -1,0 +1,10 @@
+<?php $config = array(
+    "database_type"=>"mysql",
+    "database_name"=>"ontrack",
+    "server"=>"localhost",
+    "username"=>"root",
+    "password"=>"",
+    "charset"=>"utf8",
+    "port"=>3306,
+    "encryption_key"=>"3abd0fe7c8e209a5267bb2e3d7ef2bc5cc6b85140d644754f601fa03e3005acd",
+	"encryption_iv"=>"c811fbecd47b661fc4fd94b49c30448a0677d8f5b70ca855c69f52d0009d7ba3" ); ?>
