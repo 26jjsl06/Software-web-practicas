@@ -15,7 +15,7 @@ switch ($request_method) {
             $result = $database->select("assetcategories", "*", [ "AND" => $filters ]);
         }
 
-        $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "¡Éxito!", "result" => $result ];
     break;
 
     case 'add':
@@ -23,8 +23,8 @@ switch ($request_method) {
 
         $status = Attribute::addAssetCategory($data);
 
-        if($status == 10) $response = [ "status" => 1, "status_message" => "Success! Item has been added successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to add item." ];
+        if($status == 10) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha agregado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo agregar el artículo." ];
     break;
 
     case 'edit':
@@ -32,8 +32,8 @@ switch ($request_method) {
 
         $status = Attribute::editAssetCategory($data);
 
-        if($status == 20) $response = [ "status" => 1, "status_message" => "Success! Item has been updated successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to update item." ];
+        if($status == 20) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha actualizado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo actualizar el artículo." ];
     break;
 
     case 'delete':
@@ -41,14 +41,14 @@ switch ($request_method) {
 
         $status = Attribute::deleteAssetCategory($id);
 
-        if($status == 30) $response = [ "status" => 1, "status_message" => "Success! Item has been delete successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to delete item." ];
+        if($status == 30) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha eliminado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo eliminar el elemento." ];
     break;
 
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " no permitido para este recurso." ];
     break;
 }
 
