@@ -21,7 +21,7 @@ switch ($request_method) {
             $i++;
         }
 
-        $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "¡Éxito!", "result" => $result ];
     break;
 
     case 'add':
