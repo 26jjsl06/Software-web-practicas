@@ -47,14 +47,14 @@ switch ($request_method) {
 
         $status = Asset::delete($id);
 
-        if($status == 30) $response = [ "status" => 1, "status_message" => "Success! Item has been delete successfully." ];
+        if($status == 30) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha eliminado correctamente." ];
         else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo eliminar el elemento." ];
     break;
 
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . "no permitido para este recurso." ];
     break;
 }
 

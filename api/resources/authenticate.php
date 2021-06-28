@@ -10,16 +10,16 @@ switch ($request_method) {
         //isAuthorizedApi("manageData");
 
         if(empty($filters)) {
-            $response = [ "status" => 0, "status_message" => "Authentication failure" ];
+            $response = [ "status" => 0, "status_message" => "Fallo de autentificacion" ];
         } else {
             $peopleid = signInApi($filters['username'],$filters['password']);
 
 
             if($peopleid != 0) {
                 $result = $database->get("people","*",["id" => $peopleid]);
-                $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+                $response = [ "status" => 1, "status_message" => "¡Éxito!", "result" => $result ];
             } else {
-                $response = [ "status" => 0, "status_message" => "Authentication failure" ];
+                $response = [ "status" => 0, "status_message" => "Fallo de autentificacion" ];
             }
         }
 
@@ -31,7 +31,7 @@ switch ($request_method) {
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " no permitido para este recurso." ];
     break;
 }
 
