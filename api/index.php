@@ -14,7 +14,7 @@ if($debug == true) {
 }
 
 header('Content-Type: application/json');
-$response = [ "status" => "901", "status_message" => "Unknown error." ];
+$response = [ "status" => "901", "status_message" => "Error desconocido." ];
 
 $scriptpath = dirname(__DIR__);
 $currentpath = __DIR__;
@@ -45,7 +45,7 @@ date_default_timezone_set(getConfigValue("timezone"));
 if(isset($_POST['key'])) {
     $apikey = $database->get("api_keys", "*", [ "secretkey" => $_POST['key'] ] );
     if(empty($apikey)) {
-        $response = [ "status" => 903, "status_message" => "Authentication failed. Invalid API Key" ];
+        $response = [ "status" => 903, "status_message" => "Falló la autenticación. Clave de API no válida" ];
         echo json_encode($response);
         exit;
     }
@@ -54,7 +54,7 @@ if(isset($_POST['key'])) {
     }
 }
 else {
-    $response = [ "status" => 902, "status_message" => "API key missing." ];
+    $response = [ "status" => 902, "status_message" => "API falta la llave." ];
     echo json_encode($response);
     exit;
 }
@@ -71,7 +71,7 @@ switch ($request_method) {
             if(is_array($_POST['filters'])) {
                 $filters = $_POST['filters'];
             } else {
-                $response = [ "status" => 908, "status_message" => "'filters' Error! Expected array, string given." ];
+                $response = [ "status" => 908, "status_message" => "'filters' ¡Error! Matriz esperada, cadena dada." ];
                 echo json_encode($response);
                 exit;
             }
@@ -84,13 +84,13 @@ switch ($request_method) {
             if(is_array($_POST['data'])) {
                 $data = $_POST['data'];
             } else {
-                $response = [ "status" => 909, "status_message" => "'data' Error! Expected array, string given." ];
+                $response = [ "status" => 909, "status_message" => "'data' ¡Error! Matriz esperada, cadena dada." ];
                 echo json_encode($response);
                 exit;
             }
 
         } else {
-            $response = [ "status" => 910, "status_message" => "'data' array missing." ];
+            $response = [ "status" => 910, "status_message" => "'data' falta la matriz." ];
             echo json_encode($response);
             exit;
         }
@@ -102,13 +102,13 @@ switch ($request_method) {
             if(is_array($_POST['data'])) {
                 $data = $_POST['data'];
             } else {
-                $response = [ "status" => 909, "status_message" => "'data' Error! Expected array, string given." ];
+                $response = [ "status" => 909, "status_message" => "'data' ¡Error! Matriz esperada, cadena dada." ];
                 echo json_encode($response);
                 exit;
             }
 
         } else {
-            $response = [ "status" => 910, "status_message" => "'data' array missing." ];
+            $response = [ "status" => 910, "status_message" => "'data' falta la matriz." ];
             echo json_encode($response);
             exit;
         }
@@ -119,13 +119,13 @@ switch ($request_method) {
             if(is_array($_POST['data'])) {
                 $data = $_POST['data'];
             } else {
-                $response = [ "status" => 909, "status_message" => "'data' Error! Expected array, string given." ];
+                $response = [ "status" => 909, "status_message" => "'data' ¡Error! Matriz esperada, cadena dada." ];
                 echo json_encode($response);
                 exit;
             }
 
         } else {
-            $response = [ "status" => 910, "status_message" => "'data' array missing." ];
+            $response = [ "status" => 910, "status_message" => "'data' falta la matriz." ];
             echo json_encode($response);
             exit;
         }
@@ -136,13 +136,13 @@ switch ($request_method) {
             if(is_array($_POST['data'])) {
                 $data = $_POST['data'];
             } else {
-                $response = [ "status" => 909, "status_message" => "'data' Error! Expected array, string given." ];
+                $response = [ "status" => 909, "status_message" => "'data' ¡Error! Matriz esperada, cadena dada." ];
                 echo json_encode($response);
                 exit;
             }
 
         } else {
-            $response = [ "status" => 910, "status_message" => "'data' array missing." ];
+            $response = [ "status" => 910, "status_message" => "'data' falta la matriz." ];
             echo json_encode($response);
             exit;
         }
@@ -151,7 +151,7 @@ switch ($request_method) {
     case 'delete':
         if(isset($_POST['id'])) {
             if(is_array($_POST['id'])) {
-                $response = [ "status" => 911, "status_message" => "'id' Error! Expected string, array given." ];
+                $response = [ "status" => 911, "status_message" => "'id' ¡Error! Cadena esperada, matriz dada." ];
                 echo json_encode($response);
                 exit;
             } else {
@@ -159,7 +159,7 @@ switch ($request_method) {
             }
 
         } else {
-            $response = [ "status" => 912, "status_message" => "'id' string missing." ];
+            $response = [ "status" => 912, "status_message" => "'id' falta cadena." ];
             echo json_encode($response);
             exit;
         }
@@ -168,7 +168,7 @@ switch ($request_method) {
 
 
     default:
-        $response = [ "status" => 906, "status_message" => "Request method " . $request_method . " not found." ];
+        $response = [ "status" => 906, "status_message" => "Método de solicitud " . $request_method . "extraviado." ];
     break;
 }
 
@@ -320,7 +320,7 @@ switch ($request_resource) {
 
 
     default:
-        $response = [ "status" => 904, "status_message" => "Resource " . $request_resource . " does not exist." ];
+        $response = [ "status" => 904, "status_message" => "Recurso " . $request_resource . " no existe." ];
         echo json_encode($response);
         exit;
 
