@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>onTrack</title>
+        <title>Inversiones MYE S.A.C</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <link rel="shortcut icon" href="template/assets/icon.png"/>
         <link rel="apple-touch-icon" href="template/assets/icon-large.png"/>
@@ -28,7 +28,7 @@
         <?php echo getConfigValue("app_name"); ?>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
-        <p class="login-box-msg"><?php _e('Sign in to start your session'); ?></p>
+        <p class="login-box-msg"><?php _e('Regístrese para iniciar su sesión'); ?></p>
         <?php if(!empty($statusmessage)): ?>
 				<div class="row"><div class='col-md-12'><div class="alert alert-<?php print $statusmessage["type"]; ?> alert-auto" role="alert"><?php print $statusmessage["message"]; ?></div></div></div>
 		<?php endif; ?>
@@ -36,7 +36,7 @@
 
             <?php if(getConfigValue("ldap_enable") == "true") { ?>
                 <div class="form-group has-feedback">
-                    <input type="text" name="email" class="form-control" placeholder="<?php _e('Email / Username'); ?>" required autofocus/>
+                    <input type="text" name="email" class="form-control" placeholder="<?php _e('Email / Usuario'); ?>" required autofocus/>
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 </div>
             <?php } else { ?>

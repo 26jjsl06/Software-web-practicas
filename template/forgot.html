@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>onTrack</title>
+        <title>Inversiones MYE S.A.C</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <link rel="shortcut icon" href="template/assets/icon.png"/>
         <link rel="apple-touch-icon" href="template/assets/icon-large.png"/>
@@ -31,7 +31,7 @@
 
 <?php if(!isset($_GET['resetkey'])) { ?>
       <div class="login-box-body">
-        <p class="login-box-msg"><?php _e('Enter email address to reset your password'); ?></p>
+        <p class="login-box-msg"><?php _e('Ingrese la dirección de correo electrónico para restablecer su contraseña'); ?></p>
         <?php if(!empty($statusmessage)): ?>
 				<div class="row"><div class='col-md-12'><div class="alert alert-<?php print $statusmessage["type"]; ?> alert-auto" role="alert"><?php print __($statusmessage["message"]); ?></div></div></div>
 		<?php endif; ?>
@@ -45,18 +45,18 @@
 
             </div><!-- /.col -->
             <div class="col-xs-6">
-              <button type="submit" class="btn btn-primary btn-block btn-flat"><?php _e('Continue'); ?></button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat"><?php _e('Continuar'); ?></button>
             </div><!-- /.col -->
           </div>
 		<input type="hidden" name="resetConfirmation"/>
         </form>
       </div><!-- /.login-box-body -->
-      <br><p class="text-center"><a href="?route=login"><?php _e('Log In'); ?></a></p>
+      <br><p class="text-center"><a href="?route=login"><?php _e('Iniciar sesión'); ?></a></p>
 <?php } ?>
 
 <?php if(isset($_GET['resetkey'])) { ?>
       <div class="login-box-body">
-        <p class="login-box-msg">Enter new password</p>
+        <p class="login-box-msg">Introduzca una nueva contraseña</p>
         <?php if(!empty($statusmessage)): ?>
 				<div class="row"><div class='col-md-12'><div class="alert alert-<?php print $statusmessage["type"]; ?> alert-auto" role="alert"><?php print __($statusmessage["message"]); ?></div></div></div>
 		<?php endif; ?>
@@ -70,14 +70,14 @@
 
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat"><?php _e('Continue'); ?></button>
+              <button type="submit" class="btn btn-primary btn-block btn-flat"><?php _e('Continuar'); ?></button>
             </div><!-- /.col -->
           </div>
 		<input type="hidden" name="resetPassword"/>
         <input type="hidden" name="resetkey" value="<?php echo $_GET['resetkey']; ?>"/>
         </form>
       </div><!-- /.login-box-body -->
-      <br><p class="text-center"><a href="?route=login"><?php _e('Log In'); ?></a></p>
+      <br><p class="text-center"><a href="?route=login"><?php _e('Iniciar sesión'); ?></a></p>
 <?php } ?>
     </div><!-- /.login-box -->
 

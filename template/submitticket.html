@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?php _e('Submit Ticket'); ?></title>
+        <title><?php _e('Enviar ticket'); ?></title>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="shortcut icon" href="template/assets/icon.png"/>
         <link rel="apple-touch-icon" href="template/assets/icon-large.png"/>
@@ -69,7 +69,7 @@
                             <div class="box box-primary">
 
                                 <div class="box-header">
-                                    <h3 class="box-title"><?php _e('Submit Ticket'); ?></h3>
+                                    <h3 class="box-title"><?php _e('Enviar ticket'); ?></h3>
                                 </div>
 
                                 <div class="box-body">
@@ -81,14 +81,14 @@
 
                                             <div class="col-md-8">
                                                 <div class="form-group">
-                                                    <label for="subject"><?php _e('Subject'); ?> *</label>
+                                                    <label for="subject"><?php _e('Sujeto'); ?> *</label>
                                                     <input type="text" class="form-control" id="subject" name="subject" value="" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="departmentid"><?php _e('Department'); ?></label>
+                                                    <label for="departmentid"><?php _e('Departamento'); ?></label>
                                                     <select class="form-control select2 select2-hidden-accessible" id="departmentid" name="departmentid" style="width: 100%;" tabindex="-1" aria-hidden="true">
 
                                                         <?php foreach ($departments as $department) { ?>
@@ -100,25 +100,25 @@
 
                                             <div class="col-md-8">
                                                 <div class="form-group">
-                                                    <label for="email"><?php _e('Email Address'); ?> *</label>
+                                                    <label for="email"><?php _e('Dirección de correo electrónico'); ?> *</label>
                                                     <input type="email" class="form-control" id="email" name="email" placeholder="<?php _e('Your Email Address'); ?>" required>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="email"><?php _e('Priority'); ?></label>
+                                                    <label for="email"><?php _e('Prioridad'); ?></label>
                                                     <select class="form-control select2" id="priority" name="priority" style="width: 100%;">
-                                                        <option value="Low"><?php _e('Low'); ?></option>
+                                                        <option value="Low"><?php _e('Baja'); ?></option>
                                                         <option value="Normal" selected><?php _e('Normal'); ?></option>
-                                                        <option value="High"><?php _e('High'); ?></option>
+                                                        <option value="High"><?php _e('Alta'); ?></option>
                                                     </select>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label for="message" class="control-label"><?php _e('Message'); ?></label>
+                                                    <label for="message" class="control-label"><?php _e('Mensaje'); ?></label>
                                                     <textarea class="form-control summernoteTicket" id="message" name="message" required></textarea>
                                                 </div>
                                             </div>
@@ -133,7 +133,7 @@
                                                 <?php } ?>
 									        </div>
 									        <div class="col-xs-6">
-												<button type="submit" class="btn btn-primary btn-block btn-flat"><?php _e('Submit'); ?></button>
+												<button type="submit" class="btn btn-primary btn-block btn-flat"><?php _e('Enviar'); ?></button>
 									        </div>
 									    </div>
 
@@ -153,7 +153,7 @@
                             </div>
                             <!-- /.box -->
                         <?php } else { ?>
-                            <div class="alert alert-danger" role="alert"><?php _e('Public ticket submission is disabled.'); ?></div>
+                            <div class="alert alert-danger" role="alert"><?php _e('El envío de entradas públicas está deshabilitado.'); ?></div>
                         <?php } ?>
 
 

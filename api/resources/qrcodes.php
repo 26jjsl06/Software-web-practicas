@@ -15,7 +15,7 @@ switch ($request_method) {
             $result = $database->select("qrcodes", "*", [ "AND" => $filters ]);
         }
 
-        $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "¡Éxito!", "result" => $result ];
     break;
 
     case 'edit':
@@ -23,8 +23,8 @@ switch ($request_method) {
 
         $status = Attribute::editQrcode($data);
 
-        if($status == 20) $response = [ "status" => 1, "status_message" => "Success! Item has been updated successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to update item." ];
+        if($status == 20) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha actualizado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo actualizar el artículo." ];
     break;
 
 
@@ -33,8 +33,8 @@ switch ($request_method) {
 
         $status = Attribute::deleteQrcode($id);
 
-        if($status == 30) $response = [ "status" => 1, "status_message" => "Success! Item has been deleted successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to delete item." ];
+        if($status == 30) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha eliminado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo eliminar el elemento." ];
     break;
 
 
@@ -43,8 +43,8 @@ switch ($request_method) {
 
         $status = Attribute::attachQrcode($data);
 
-        if($status == "10") $response = [ "status" => 1, "status_message" => "Success! Item has been attached successfully." ];
-        elseif($status == "11") $response = [ "status" => 2, "status_message" => "Error! Unable to attach item. Make sure the QR code is generated and free." ];
+        if($status == "10") $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha adjuntado correctamente." ];
+        elseif($status == "11") $response = [ "status" => 2, "status_message" => "¡Error! No se puede adjuntar el artículo. Asegúrese de que el código QR se genere y sea gratuito." ];
         else $response = [ "status" => 2, "status_message" => "¡Error! No se puede adjuntar el artículo." ];
     break;
 
