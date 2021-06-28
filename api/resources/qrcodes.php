@@ -45,7 +45,7 @@ switch ($request_method) {
 
         if($status == "10") $response = [ "status" => 1, "status_message" => "Success! Item has been attached successfully." ];
         elseif($status == "11") $response = [ "status" => 2, "status_message" => "Error! Unable to attach item. Make sure the QR code is generated and free." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to attach item." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se puede adjuntar el artículo." ];
     break;
 
     case 'detach':
@@ -53,13 +53,13 @@ switch ($request_method) {
 
         $status = Attribute::detachQrcode($id);
 
-        if($status == 30) $response = [ "status" => 1, "status_message" => "Success! Item has been detached successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to detach item." ];
+        if($status == 30) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha separado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se puede separar el artículo." ];
     break;
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " no permitido para este recurso." ];
     break;
 }
 
