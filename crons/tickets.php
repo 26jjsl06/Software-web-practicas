@@ -40,10 +40,10 @@ $username = getConfigValue("tickets_username");
 $password = getConfigValue("tickets_password");
 $encryption = getConfigValue("tickets_encrypton");
 
-if(empty($mailbox) || empty($username)) echo "Please configure your IMAP server in System > System Settings > Tickets.";
+if(empty($mailbox) || empty($username)) echo "Configure su servidor IMAP en Sistema > Configuración del sistema> Tickets.";
 else {
     $imap = new Imap($mailbox, $username, $password, $encryption);
-    if($imap->isConnected()===false) echo "Could not authenticate to IMAP server. Please check your IMAP server configuration in System > System Settings > Tickets.";
+    if($imap->isConnected()===false) echo "No se pudo autenticar en el servidor IMAP. Verifique la configuración de su servidor IMAP en Sistema> Configuración del sistema> Tickets.";
     else {
         $imap->selectFolder('INBOX');
         $overallMessages = $imap->countMessages();
