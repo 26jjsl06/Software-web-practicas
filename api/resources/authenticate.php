@@ -12,7 +12,7 @@ switch ($request_method) {
         if(empty($filters)) {
             $response = [ "status" => 0, "status_message" => "Fallo de autentificacion" ];
         } else {
-            $peopleid = signInApi($filters['username'],$filters['password']);
+            $peopleid = signInApi($filters['usuario'],$filters['contraseña']);
 
 
             if($peopleid != 0) {

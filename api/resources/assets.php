@@ -54,7 +54,7 @@ switch ($request_method) {
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . "no permitido para este recurso." ];
+        $response = [ "status" => 907, "status_message" => "Metodo de solicitud" . $request_method . "no permitido para este recurso." ];
     break;
 }
 
