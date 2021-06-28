@@ -15,7 +15,7 @@ switch ($request_method) {
             $result = $database->select("comments", "*", [ "AND" => $filters ]);
         }
 
-        $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "Exito!", "result" => $result ];
     break;
 
     case 'add':
@@ -48,7 +48,7 @@ switch ($request_method) {
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " no permitido para este recurso." ];
+        $response = [ "status" => 907, "status_message" => "Metodo de solicitud " . $request_method . " no permitido para este recurso." ];
     break;
 }
 

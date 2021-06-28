@@ -21,7 +21,7 @@ switch ($request_method) {
             $i++;
         }
 
-        $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "Exito!", "result" => $result ];
     break;
 
     case 'add':
@@ -29,8 +29,8 @@ switch ($request_method) {
 
         $status = Kb::add($data);
 
-        if($status == 10) $response = [ "status" => 1, "status_message" => "Success! Item has been added successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to add item." ];
+        if($status == 10) $response = [ "status" => 1, "status_message" => "Exito! El elemento se ha agregado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "Error! No se pudo agregar el elemento." ];
     break;
 
     case 'edit':
@@ -38,8 +38,8 @@ switch ($request_method) {
 
         $status = Kb::edit($data);
 
-        if($status == 20) $response = [ "status" => 1, "status_message" => "Success! Item has been updated successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to update item." ];
+        if($status == 20) $response = [ "status" => 1, "status_message" => "Exito! El elemento se ha actualizado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "Error! No se pudo actualizar el elemento." ];
     break;
 
     case 'delete':
@@ -47,14 +47,14 @@ switch ($request_method) {
 
         $status = Kb::delete($id);
 
-        if($status == 30) $response = [ "status" => 1, "status_message" => "Success! Item has been delete successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to delete item." ];
+        if($status == 30) $response = [ "status" => 1, "status_message" => "Exito! El elemento se elimino correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "Error! No se pudo eliminar el elemento." ];
     break;
 
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " no permitido para este elemento." ];
     break;
 }
 

@@ -16,14 +16,14 @@ switch ($request_method) {
         }
 
 
-        $response = [ "status" => 1, "status_message" => "Success!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "Exito!", "result" => $result ];
     break;
 
 
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Request method " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Metodo de recursos " . $request_method . " No permitido en este elemento." ];
     break;
 }
 
