@@ -29,8 +29,8 @@ switch ($request_method) {
 
         $status = Asset::addApi($data);
 
-        if($status == 10) $response = [ "status" => 1, "status_message" => "Success! Item has been added successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to add item." ];
+        if($status == 10) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha agregado correctamente." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo agregar el artículo." ];
     break;
 
     case 'edit':
@@ -38,7 +38,7 @@ switch ($request_method) {
 
         $status = Asset::editApi($data);
 
-        if($status == 20) $response = [ "status" => 1, "status_message" => "Success! Item has been updated successfully." ];
+        if($status == 20) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha actualizado correctamente." ];
         else $response = [ "status" => 2, "status_message" => "Error! Unable to update item." ];
     break;
 
@@ -48,7 +48,7 @@ switch ($request_method) {
         $status = Asset::delete($id);
 
         if($status == 30) $response = [ "status" => 1, "status_message" => "Success! Item has been delete successfully." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to delete item." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo eliminar el elemento." ];
     break;
 
 
