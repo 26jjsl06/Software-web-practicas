@@ -21,14 +21,14 @@ switch ($request_method) {
             $i++;
         }
 
-        $response = [ "status" => 1, "status_message" => "Exito!", "result" => $result ];
+        $response = [ "status" => 1, "status_message" => "¡Éxito!", "result" => $result ];
     break;
 
 
 
 
     default:
-        $response = [ "status" => 907, "status_message" => "Metodo de solicitud " . $request_method . " not allowed for this resourse." ];
+        $response = [ "status" => 907, "status_message" => "Método de solicitud " . $request_method . " no permitido para este recurso." ];
     break;
 }
 
