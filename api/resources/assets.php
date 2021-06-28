@@ -39,7 +39,7 @@ switch ($request_method) {
         $status = Asset::editApi($data);
 
         if($status == 20) $response = [ "status" => 1, "status_message" => "¡Éxito! El artículo se ha actualizado correctamente." ];
-        else $response = [ "status" => 2, "status_message" => "Error! Unable to update item." ];
+        else $response = [ "status" => 2, "status_message" => "¡Error! No se pudo actualizar el artículo." ];
     break;
 
     case 'delete':
