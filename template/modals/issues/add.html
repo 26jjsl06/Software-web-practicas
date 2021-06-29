@@ -1,23 +1,23 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Add Issue'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Agregar asunto'); ?></h4></div>
 <div class="modal-body">
 
     <div class="row">
         <div class="col-md-8">
             <div class="form-group">
-                <label for="name"><?php _e('Issue Name'); ?> *</label>
+                <label for="name"><?php _e('Nombre del asunto'); ?> *</label>
                 <input type="text" class="form-control" id="name" name="name" value="" required>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="issuetype"><?php _e('Type'); ?></label>
+                <label for="issuetype"><?php _e('Tipo'); ?></label>
                 <select class="form-control select2-icon" id="issuetype" name="issuetype" style="width: 100%;">
-                    <option value="Task" data-icon="fa-check-square fa-fw text-blue"> <?php _e('Task'); ?></option>
-                    <option value="Maintenance" data-icon="fa-minus-square fa-fw text-yellow"> <?php _e('Maintenance'); ?></option>
-                    <option value="Bug" data-icon="fa-bug fa-fw text-red"> <?php _e('Bug'); ?></option>
-                    <option value="Improvement" data-icon="fa-external-link fa-fw text-teal"> <?php _e('Improvement'); ?></option>
-                    <option value="New Feature" data-icon="fa-plus-square fa-fw text-green"> <?php _e('New Feature'); ?></option>
-                    <option value="Story" data-icon="fa-circle fa-fw text-red"> <?php _e('Story'); ?></option>
+                    <option value="Tarea" data-icon="fa-check-square fa-fw text-blue"> <?php _e('Tarea'); ?></option>
+                    <option value="Mantenimiento" data-icon="fa-minus-square fa-fw text-yellow"> <?php _e('Mantenimiento'); ?></option>
+                    <option value="Error" data-icon="fa-bug fa-fw text-red"> <?php _e('Error'); ?></option>
+                    <option value="Mejoramiento" data-icon="fa-external-link fa-fw text-teal"> <?php _e('Mejoramiento'); ?></option>
+                    <option value="Nueva caracteristica" data-icon="fa-plus-square fa-fw text-green"> <?php _e('Nueva caracteristica'); ?></option>
+                    <option value="Historia" data-icon="fa-circle fa-fw text-red"> <?php _e('Historia'); ?></option>
                 </select>
             </div>
         </div>
@@ -27,9 +27,9 @@
         <div class="col-md-6">
             <?php if($isAdmin) { ?>
                 <div class="form-group">
-                    <label for="clientid"><?php _e('Client'); ?></label>
+                    <label for="clientid"><?php _e('Cliente'); ?></label>
                     <select class="form-control select2 select2-hidden-accessible" id="clientid" name="clientid" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                        <option value="0"><?php _e('None'); ?></option>
+                        <option value="0"><?php _e('Ninguno'); ?></option>
                         <?php foreach ($clients as $client) { ?>
                             <option value='<?php echo $client['id']; ?>' <?php if(isset($_GET['clientid'])) { if($_GET['clientid'] == $client['id']) echo "selected"; }  ?>><?php echo $client['name']; ?></option>
                         <?php } ?>
@@ -41,9 +41,9 @@
         <div class="col-md-6">
             <?php if($isAdmin) { ?>
                 <div class="form-group">
-                    <label for="adminid"><?php _e('Assign To'); ?></label>
+                    <label for="adminid"><?php _e('Asignar a'); ?></label>
                     <select class="form-control select2 select2-hidden-accessible" id="adminid" name="adminid" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                        <option value="0"><?php _e('Nobody'); ?></option>
+                        <option value="0"><?php _e('Nadie'); ?></option>
                         <?php foreach ($admins as $admin) { ?>
                             <option value='<?php echo $admin['id']; ?>' <?php if(isset($liu['id'])) { if($liu['id'] == $admin['id']) echo "selected"; }  ?>><?php echo $admin['name']; ?></option>
                         <?php } ?>
@@ -57,12 +57,12 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="assetid"><?php _e('Asset'); ?></label>
+                <label for="assetid"><?php _e('Activo'); ?></label>
                 <select class="form-control assetsSelect select2-hidden-accessible" id="assetid" name="assetid" style="width: 100%;">
                     <?php if(isset($_GET['assetid'])) { ?>
                         <option value="<?php echo $_GET['assetid']; ?>"><?php echo getSingleValue("assets","tag",$_GET['assetid']) ; ?> <?php echo getSingleValue("assets","name",$_GET['assetid']) ; ?></option>
                     <?php } else { ?>
-                        <option value="0"><?php _e('None'); ?></option>
+                        <option value="0"><?php _e('Ninguno'); ?></option>
                     <?php } ?>
                 </select>
             </div>
@@ -70,12 +70,12 @@
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="projectid"><?php _e('Project'); ?></label>
+                <label for="projectid"><?php _e('Proyecto'); ?></label>
                 <select class="form-control projectsSelect select2-hidden-accessible" id="projectid" name="projectid" style="width: 100%;" tabindex="-1" aria-hidden="true">
                     <?php if(isset($_GET['projectid'])) { ?>
                         <option value="<?php echo $_GET['projectid']; ?>"><?php echo getSingleValue("projects","tag",$_GET['projectid']) ; ?> <?php echo getSingleValue("projects","name",$_GET['projectid']) ; ?></option>
                     <?php } else { ?>
-                        <option value="0"><?php _e('None'); ?></option>
+                        <option value="0"><?php _e('Ninguno'); ?></option>
                     <?php } ?>
                 </select>
             </div>
@@ -87,30 +87,30 @@
 
         <div class="col-md-4">
             <div class="form-group">
-                <label for="status"><?php _e('Status'); ?></label>
+                <label for="status"><?php _e('Estado'); ?></label>
                 <select class="form-control select2" id="status" name="status" style="width: 100%;">
-                    <option value="To Do"><?php _e('To Do'); ?></option>
-                    <option value="In Progress"><?php _e('In Progress'); ?></option>
-                    <option value="In Review"><?php _e('In Review'); ?></option>
-                    <option value="Done"><?php _e('Done'); ?></option>
+                    <option value="Que hacer"><?php _e('Que hacer'); ?></option>
+                    <option value="En progreso"><?php _e('En progreso'); ?></option>
+                    <option value="En revisión"><?php _e('En revisión'); ?></option>
+                    <option value="Terminado"><?php _e('Terminado'); ?></option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="form-group">
-                <label for="priority"><?php _e('Priority'); ?></label>
+                <label for="priority"><?php _e('Prioridad'); ?></label>
                 <select class="form-control select2" id="priority" name="priority" style="width: 100%;">
-                    <option value="Low"><?php _e('Low'); ?></option>
+                    <option value="Bajo"><?php _e('Bajo'); ?></option>
                     <option value="Normal" selected><?php _e('Normal'); ?></option>
-                    <option value="High"><?php _e('High'); ?></option>
+                    <option value="Alto"><?php _e('Alto'); ?></option>
                 </select>
             </div>
         </div>
 
         <div class="col-md-4">
             <div class="form-group">
-                <label for="duedate"><?php _e('Due Date'); ?></label>
+                <label for="duedate"><?php _e('Fecha de vencimiento'); ?></label>
                 <div class="input-group">
                     <input type="text" class="form-control duedate" id="duedate" name="duedate">
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -120,7 +120,7 @@
     </div>
 
     <div class="form-group">
-        <label for="description" class="control-label"><?php _e('Description'); ?></label>
+        <label for="description" class="control-label"><?php _e('Descripcion'); ?></label>
         <textarea class="form-control summernote-modal" id="description" name="description"></textarea>
     </div>
 
@@ -130,8 +130,8 @@
     <input type="hidden" name="section" value="<?php echo $_GET['section']; ?>">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-primary btn-flat"><i class="fa fa-check"></i> <?php _e('Create'); ?></button>
+    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-primary btn-flat"><i class="fa fa-check"></i> <?php _e('Crear'); ?></button>
 </div>
 
 <script type="text/javascript">
@@ -193,7 +193,7 @@
     			//cache: true,
     	    },
     	    minimumInputLength: 0,
-    		placeholder: "<?php _e('Please Select'); ?>",
+    		placeholder: "<?php _e('Por favor seleccione'); ?>",
     	});
 
         $('.projectsSelect').select2({
@@ -217,7 +217,7 @@
                 //cache: true,
             },
             minimumInputLength: 0,
-            placeholder: "<?php _e('Please Select'); ?>",
+            placeholder: "<?php _e('Por favor seleccione'); ?>",
         });
 
 

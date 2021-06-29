@@ -1,23 +1,23 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Edit Client'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Editar cliente'); ?></h4></div>
 <div class="modal-body">
 
     <div class="row">
         <div class="col-xs-12">
             <div class="form-group">
-                <label for="name"><?php _e('Name'); ?> *</label>
+                <label for="name"><?php _e('Nombre'); ?> *</label>
                 <input type="text" class="form-control" id="name" name="name" value="<?php echo $client['name']; ?>" required>
             </div>
         </div>
 
         <div class="col-xs-6">
             <div class="form-group">
-                <label for="asset_tag_prefix"><?php _e('Asset Tag Prefix'); ?> *</label>
+                <label for="asset_tag_prefix"><?php _e('Prefijo de etiqueta de activo'); ?> *</label>
                 <input type="text" class="form-control" id="asset_tag_prefix" name="asset_tag_prefix" value="<?php echo $client['asset_tag_prefix']; ?>" required>
             </div>
         </div>
         <div class="col-xs-6">
             <div class="form-group">
-                <label for="license_tag_prefix"><?php _e('License Tag Prefix'); ?> *</label>
+                <label for="license_tag_prefix"><?php _e('Prefijo de etiqueta de licencia'); ?> *</label>
                 <input type="text" class="form-control" id="license_tag_prefix" name="license_tag_prefix" value="<?php echo $client['license_tag_prefix']; ?>" required>
             </div>
         </div>
@@ -31,6 +31,6 @@
     <input type="hidden" name="section" value="">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Save'); ?></button>
+    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Guardar'); ?></button>
 </div>

@@ -1,43 +1,43 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Add Escalation Rule'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Agregar regla de escalamiento'); ?></h4></div>
 <div class="modal-body">
 
     <div class="row">
         <div class="col-xs-12">
             <div class="form-group">
-                <label for="name"><?php _e('Rule Name'); ?> *</label>
+                <label for="name"><?php _e('Nombre de regla'); ?> *</label>
                 <input type="text" class="form-control" id="name" name="name" value="" required>
             </div>
         </div>
     </div>
 
     <div class="row">
-        <div class="col-xs-12"><h4>Conditions</h4></div>
+        <div class="col-xs-12"><h4>Condiciones</h4></div>
         <div class="col-xs-6">
             <div class="form-group">
                 <label for="cond_status">Status</label>
                 <select class="form-control select2 select2-hidden-accessible" id="cond_status" name="cond_status[]" multiple style="width: 100%;" tabindex="-1" aria-hidden="true">
-                    <option value="Open"><?php _e('Open'); ?></option>
-                    <option value="In Progress"><?php _e('In Progress'); ?></option>
-                    <option value="Answered"><?php _e('Answered'); ?></option>
-                    <option value="Reopened"><?php _e('Reopened'); ?></option>
-                    <option value="Closed"><?php _e('Closed'); ?></option>
+                    <option value="Abierto"><?php _e('Abierto'); ?></option>
+                    <option value="En progreso"><?php _e('En progreso'); ?></option>
+                    <option value="Respondido"><?php _e('Respondido'); ?></option>
+                    <option value="Reabierto"><?php _e('Reabierto'); ?></option>
+                    <option value="Cerrado"><?php _e('Cerrado'); ?></option>
                 </select>
             </div>
         </div>
         <div class="col-xs-6">
             <div class="form-group">
-                <label for="cond_priority"><?php _e('Priority'); ?></label>
+                <label for="cond_priority"><?php _e('Prioridad'); ?></label>
                 <select class="form-control select2 select2-hidden-accessible" id="cond_priority" name="cond_priority[]" multiple style="width: 100%;" tabindex="-1" aria-hidden="true">
-                    <option value="Low"><?php _e('Low'); ?></option>
+                    <option value="Bajo"><?php _e('Bajo'); ?></option>
                     <option value="Normal"><?php _e('Normal'); ?></option>
-                    <option value="High"><?php _e('High'); ?></option>
+                    <option value="Alto"><?php _e('Alto'); ?></option>
                 </select>
             </div>
         </div>
         <?php if(isset($_GET['ticketid'])) { ?>
             <div class="col-xs-6">
                 <div class="form-group">
-                    <label for="cond_datetime_date"><?php _e('Process at'); ?></label>
+                    <label for="cond_datetime_date"><?php _e('Proceso en'); ?></label>
                     <div class="input-group">
                         <input type="text" class="form-control cond_datetime_date" id="cond_datetime_date" name="cond_datetime_date" required>
                         <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -53,17 +53,17 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12"><p class="text-muted"><?php _e('Per ticket escalation rules are processed one time only.'); ?></p></div>
+            <div class="col-xs-12"><p class="text-muted"><?php _e('Las reglas de escalamiento por ticket se procesan solo una vez.'); ?></p></div>
         <?php } ?>
         <?php if(!isset($_GET['ticketid'])) { ?>
             <div class="col-xs-12">
                 <div class="form-group">
-                    <label for="cond_timeelapsed"><?php _e('Time Elapsed (minutes)'); ?></label>
+                    <label for="cond_timeelapsed"><?php _e('Tiempo transcurrido (minutos)'); ?></label>
                     <div class="input-group">
                         <input type="number" class="form-control" id="cond_timeelapsed" name="cond_timeelapsed">
                         <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
                     </div>
-                    <p class="text-muted"><?php _e('Minutes since last reply, leave empty to ignore.'); ?></p>
+                    <p class="text-muted"><?php _e('Minutos desde la última respuesta, dejar en blanco para ignorar.'); ?></p>
                 </div>
             </div>
         <?php } ?>
@@ -71,36 +71,36 @@
 
 
     <div class="row">
-        <div class="col-xs-12"><h4>Actions</h4></div>
+        <div class="col-xs-12"><h4>Acciones</h4></div>
         <div class="col-xs-4">
             <div class="form-group">
                 <label for="act_status">Status</label>
                 <select class="form-control select2 select2-hidden-accessible" id="act_status" name="act_status" style="width: 100%;">
-                    <option value="0"><?php _e('- No Change -'); ?></option>
-                    <option value="Open"><?php _e('Open'); ?></option>
-                    <option value="In Progress"><?php _e('In Progress'); ?></option>
-                    <option value="Answered"><?php _e('Answered'); ?></option>
-                    <option value="Reopened"><?php _e('Reopened'); ?></option>
-                    <option value="Closed"><?php _e('Closed'); ?></option>
+                    <option value="0"><?php _e('- Ningún cambio -'); ?></option>
+                    <option value="Abierto"><?php _e('Abierto'); ?></option>
+                    <option value="En progreso"><?php _e('En progreso'); ?></option>
+                    <option value="Respondido"><?php _e('Respondido'); ?></option>
+                    <option value="Reabierto"><?php _e('Reabierto'); ?></option>
+                    <option value="Cerrado"><?php _e('Cerrado'); ?></option>
                 </select>
             </div>
         </div>
         <div class="col-xs-4">
             <div class="form-group">
-                <label for="act_priority"><?php _e('Priority'); ?></label>
+                <label for="act_priority"><?php _e('Prioritario'); ?></label>
                 <select class="form-control select2 select2-hidden-accessible" id="act_priority" name="act_priority" style="width: 100%;">
-                    <option value="0"><?php _e('- No Change -'); ?></option>
-                    <option value="Low"><?php _e('Low'); ?></option>
+                    <option value="0"><?php _e('- Ningún cambio -'); ?></option>
+                    <option value="Bajo"><?php _e('Bajo'); ?></option>
                     <option value="Normal"><?php _e('Normal'); ?></option>
-                    <option value="High"><?php _e('High'); ?></option>
+                    <option value="Alto"><?php _e('Alto'); ?></option>
                 </select>
             </div>
         </div>
         <div class="col-xs-4">
             <div class="form-group">
-                <label for="act_assignto"><?php _e('Assign To'); ?></label>
+                <label for="act_assignto"><?php _e('Asignar a'); ?></label>
                 <select class="form-control select2 select2-hidden-accessible" id="act_assignto" name="act_assignto" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                    <option value="0"><?php _e('- No Change -'); ?></option>
+                    <option value="0"><?php _e('- Ningun cambio -'); ?></option>
                     <?php foreach ($admins as $admin) { ?>
                         <option value='<?php echo $admin['id']; ?>'><?php echo $admin['name']; ?></option>
                     <?php } ?>
@@ -111,15 +111,15 @@
 
     <div class="row">
         <div class="col-xs-6">
-            <div class="checkbox"><label><input type="checkbox" name="act_addreply" value="1"> <?php _e('Add the reply below to the ticket'); ?></label></div>
+            <div class="checkbox"><label><input type="checkbox" name="act_addreply" value="1"> <?php _e('Agregue la respuesta a continuación al ticket'); ?></label></div>
         </div>
         <div class="col-xs-6">
-            <div class="checkbox"><label><input type="checkbox" name="act_notifyadmins" value="1"> <?php _e('Notify Admins'); ?></label></div>
+            <div class="checkbox"><label><input type="checkbox" name="act_notifyadmins" value="1"> <?php _e('Notificar a los administradores'); ?></label></div>
         </div>
     </div>
 
     <div class="form-group">
-        <label for="reply" class="control-label"><?php _e('Reply'); ?></label>
+        <label for="reply" class="control-label"><?php _e('Respuesta'); ?></label>
         <textarea class="form-control summernote-modal" id="reply" name="reply"></textarea>
     </div>
 
@@ -142,8 +142,8 @@
     <input type="hidden" name="section" value="<?php echo $_GET['section']; ?>">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Create'); ?></button>
+    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Crear'); ?></button>
 </div>
 
 <script type="text/javascript">

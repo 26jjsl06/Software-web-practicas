@@ -33,7 +33,7 @@
 
 
     <div class="form-group">
-        <label for="roleid"><?php _e('Role'); ?></label>
+        <label for="roleid"><?php _e('Rol'); ?></label>
         <select class="form-control select2 select2-hidden-accessible" id="roleid" name="roleid" style="width: 100%;" tabindex="-1" aria-hidden="true">
             <?php foreach ($roles as $role) { ?>
                 <option value='<?php echo $role['id']; ?>' <?php if($role['id'] == $apikey['roleid']) echo "selected"; ?> ><?php echo $role['name']; ?></option>
@@ -51,8 +51,8 @@
     <input type="hidden" name="section" value="<?php echo $_GET['section']; ?>">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-primary btn-flat"><i class="fa fa-check"></i> <?php _e('Save'); ?></button>
+    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-primary btn-flat"><i class="fa fa-check"></i> <?php _e('Guardar'); ?></button>
 </div>
 
 <script type="text/javascript">

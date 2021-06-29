@@ -1,40 +1,40 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Editar Cheque'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Editar registro'); ?></h4></div>
 <div class="modal-body">
 
 
     <div class="form-group">
-        <label for="name" class="control-label"><?php _e('Name'); ?> *</label>
+        <label for="name" class="control-label"><?php _e('Nombre'); ?> *</label>
             <input type="text" class="form-control" id="name" name="name" value="<?php echo $check['name']; ?>" required>
     </div>
     <div class="form-group">
-        <label for="type" class="control-label"><?php _e('Type'); ?></label>
+        <label for="type" class="control-label"><?php _e('Tipo'); ?></label>
             <select class="form-control" id="type" name="type" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                <option value="Service"><?php _e('Service'); ?></option>
+                <option value="Service"><?php _e('Servicio'); ?></option>
             </select>
     </div>
     <div class="form-group">
-        <label for="port" class="control-label"><?php _e('Port'); ?> *</label>
+        <label for="port" class="control-label"><?php _e('Puerto'); ?> *</label>
             <input type="text" class="form-control" id="port" name="port" placeholder="<?php _e('Port number to check'); ?>" value="<?php echo $check['port']; ?>" required>
     </div>
     <div class="form-group">
-        <label for="monitoring" class="control-label"><?php _e('Monitoring'); ?></label>
+        <label for="monitoring" class="control-label"><?php _e('Monitoreando'); ?></label>
             <select class="form-control" id="monitoring" name="monitoring" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                <option value="1" <?php if($check['monitoring'] == 1) echo "selected"; ?>><?php _e('Enabled'); ?></option>
-                <option value="0" <?php if($check['monitoring'] == 0) echo "selected"; ?>><?php _e('Disabled'); ?></option>
+                <option value="1" <?php if($check['monitoring'] == 1) echo "selected"; ?>><?php _e('Habilitado'); ?></option>
+                <option value="0" <?php if($check['monitoring'] == 0) echo "selected"; ?>><?php _e('Desabilitado'); ?></option>
             </select>
     </div>
     <div class="form-group">
-        <label for="email" class="control-label"><?php _e('Email Notifications'); ?></label>
+        <label for="email" class="control-label"><?php _e('Notificaciónes de Correo Electrónico'); ?></label>
             <select class="form-control" id="email" name="email" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                <option value="1" <?php if($check['email'] == 1) echo "selected"; ?>><?php _e('Enabled'); ?></option>
-                <option value="0" <?php if($check['email'] == 0) echo "selected"; ?>><?php _e('Disabled'); ?></option>
+                <option value="1" <?php if($check['email'] == 1) echo "selected"; ?>><?php _e('Habilitado'); ?></option>
+                <option value="0" <?php if($check['email'] == 0) echo "selected"; ?>><?php _e('Desabilitado'); ?></option>
             </select>
     </div>
     <div class="form-group">
-        <label for="sms" class="control-label"><?php _e('SMS Notifications'); ?></label>
+        <label for="sms" class="control-label"><?php _e('Notificaciones SMS'); ?></label>
             <select class="form-control" id="sms" name="sms" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                <option value="1" <?php if($check['sms'] == 1) echo "selected"; ?>><?php _e('Enabled'); ?></option>
-                <option value="0" <?php if($check['sms'] == 0) echo "selected"; ?>><?php _e('Disabled'); ?></option>
+                <option value="1" <?php if($check['sms'] == 1) echo "selected"; ?>><?php _e('Habilitado'); ?></option>
+                <option value="0" <?php if($check['sms'] == 0) echo "selected"; ?>><?php _e('Desabiitado'); ?></option>
             </select>
     </div>
 
@@ -47,6 +47,6 @@
     <input type="hidden" name="section" value="">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Save'); ?></button>
+    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Guardar'); ?></button>
 </div>

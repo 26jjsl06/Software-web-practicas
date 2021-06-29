@@ -9,7 +9,7 @@
             <?php if (strpos($mimetype, 'image/') !== false) { ?>
                 <img class="img-responsive" src="?qa=download&id=<?php echo $file['id']; ?>">
             <?php } else { ?>
-                <p class="alert alert-warning alert-dismissible"><?php _e('This file cannot be viewed in a web browser. Please download on your PC to open.'); ?></p>
+                <p class="alert alert-warning alert-dismissible"><?php _e('Este archivo no se puede ver en un navegador web. Descargue en su PC para abrir.'); ?></p>
             <?php } ?>
         </div>
 
@@ -24,7 +24,7 @@
     <input type="hidden" name="section" value="<?php if(isset($_GET['section'])) echo $_GET['section']; else echo ""; ?>">
 </div>
 <div class="modal-footer">
-    <?php if(in_array("downloadFile",$perms)) { ?><a href="<?php echo "?qa=download&id=" . $file['id']; ?>" class='btn btn-primary'><i class='fa fa-download'></i> <?php _e('Download'); ?></a><?php } ?>
-    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Close'); ?></button>
+    <?php if(in_array("downloadFile",$perms)) { ?><a href="<?php echo "?qa=download&id=" . $file['id']; ?>" class='btn btn-primary'><i class='fa fa-download'></i> <?php _e('Descargar'); ?></a><?php } ?>
+    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cerrar'); ?></button>
 
 </div>
