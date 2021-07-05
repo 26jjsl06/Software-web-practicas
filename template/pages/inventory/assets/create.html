@@ -2,8 +2,8 @@
 <aside class="right-side">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
-		<h1><?php _e('Assets'); ?><small> <?php _e('Manage assets'); ?></small></h1>
-		<ol class="breadcrumb"><li><a href="?route=dashboard"><i class="fa fa-dashboard"></i> <?php _e('Home'); ?></a></li><li><?php _e('Inventory'); ?></li><li><a href="?route=inventory/assets"><?php _e('Assets'); ?></a></li><li class="active"><?php _e('Create'); ?></li></ol>
+		<h1><?php _e('Activos'); ?><small> <?php _e('Gestionar activos'); ?></small></h1>
+		<ol class="breadcrumb"><li><a href="?route=dashboard"><i class="fa fa-dashboard"></i> <?php _e('Casa'); ?></a></li><li><?php _e('Inventario'); ?></li><li><a href="?route=inventory/assets"><?php _e('Activos'); ?></a></li><li class="active"><?php _e('Crear'); ?></li></ol>
 	</section>
 
 	<!-- Main content -->
@@ -14,7 +14,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="box box-primary">
-          			<div class="box-header with-border"><h3 class="box-title"><?php _e('Create New Asset'); ?></h3></div><!-- /.box-header -->
+          			<div class="box-header with-border"><h3 class="box-title"><?php _e('Crear nuevo activo'); ?></h3></div><!-- /.box-header -->
                     <div class="box-body">
 						<div class="container-fluid">
 						<div class="row">
@@ -23,9 +23,9 @@
 								<div class="col-md-6">
 									<?php if($isAdmin) { ?>
 										<div class="form-group">
-											<label for="clientid"><?php _e('Client'); ?></label>
+											<label for="clientid"><?php _e('Cliente'); ?></label>
 											<select onchange='generateTag(this)' class="form-control select2 select2-hidden-accessible" id="clientid" name="clientid" style="width: 100%;" tabindex="-1" aria-hidden="true">
-												<option data-tagprefix='<?php echo getConfigValue("asset_tag_prefix"); ?>' value="0"><?php _e('None'); ?></option>
+												<option data-tagprefix='<?php echo getConfigValue("asset_tag_prefix"); ?>' value="0"><?php _e('Ninguno'); ?></option>
 												<?php foreach ($clients as $client) { echo "<option data-tagprefix='".$client['asset_tag_prefix']."' value='".$client['id']."'>".$client['name']."</option>"; } ?>
 											</select>
 										</div>
@@ -35,14 +35,14 @@
 									<div class="row">
 										<div class="col-md-4">
 											<div class="form-group">
-												<label for="tag"><?php _e('Asset Tag'); ?> *</label>
+												<label for="tag"><?php _e('Etiqueta de activo'); ?> *</label>
 												<input type="text" class="form-control" id="tag" name="tag" value="<?php echo getConfigValue("asset_tag_prefix"); ?><?php echo Asset::nextAssetTag(); ?>" required>
 											</div>
 										</div>
 
 										<div class="col-md-8">
 											<div class="form-group">
-												<label for="name"><?php _e('Asset Name'); ?> *</label>
+												<label for="name"><?php _e('Nombre del activo'); ?> *</label>
 												<input type="text" class="form-control" id="name" name="name" required>
 											</div>
 										</div>
@@ -50,7 +50,7 @@
 
 										<div class="col-md-4">
 											<div class="form-group">
-												<label for="category"><?php _e('Category'); ?> *</label>
+												<label for="category"><?php _e('Categoria'); ?> *</label>
 												<select class="form-control select2tag select2-hidden-accessible" id="category" name="category" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple>
 													<?php foreach ($categories as $category) { echo "<option value='".$category['name']."'>".$category['name']."</option>"; } ?>
 												</select>
@@ -59,7 +59,7 @@
 
 										<div class="col-md-4">
 											<div class="form-group">
-												<label for="supplier"><?php _e('Supplier'); ?></label>
+												<label for="supplier"><?php _e('Proveedor'); ?></label>
 												<select class="form-control select2tag select2-hidden-accessible" id="supplier" name="supplier" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple>
 													<?php foreach ($suppliers as $supplier) { echo "<option value='".$supplier['name']."'>".$supplier['name']."</option>"; } ?>
 												</select>
@@ -69,7 +69,7 @@
 										<div class="col-md-4">
 											<?php if($isAdmin) { ?>
 												<div class="form-group">
-													<label for="location"><?php _e('Location'); ?></label>
+													<label for="location"><?php _e('Localización'); ?></label>
 													<select class="form-control select2tag select2-hidden-accessible" id="location" name="location" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple>
 														<?php foreach ($locations as $location) {
 															$locationclient = getSingleValue("clients","name",$location['clientid']);
@@ -82,7 +82,7 @@
 
 											<?php if(!$isAdmin) { ?>
 												<div class="form-group">
-													<label for="location"><?php _e('Location'); ?></label>
+													<label for="location"><?php _e('Localizacion'); ?></label>
 													<select class="form-control select2tag select2-hidden-accessible" id="location" name="location" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple>
 														<?php foreach ($locations as $location) { echo "<option value='".$location['name']."'>".$location['name']."</option>"; } ?>
 													</select>
@@ -94,7 +94,7 @@
 
 										<div class="col-md-4">
 											<div class="form-group">
-												<label for="statusid"><?php _e('Status'); ?> *</label>
+												<label for="statusid"><?php _e('Estado'); ?> *</label>
 												<select class="form-control select2 select2-hidden-accessible" id="statusid" name="statusid" style="width: 100%;" tabindex="-1" aria-hidden="true">
 													<?php foreach ($labels as $label) { echo "<option value='".$label['id']."'>".$label['name']."</option>"; } ?>
 												</select>
@@ -103,9 +103,9 @@
 
 										<div class="col-md-4">
 											<div class="form-group">
-												<label for="userid"><?php _e('Asset User'); ?></label>
+												<label for="userid"><?php _e('Usuario activo'); ?></label>
 												<select class="form-control select2 select2-hidden-accessible" id="userid" name="userid" style="width: 100%;" tabindex="-1" aria-hidden="true">
-													<option value="0"><?php _e('None'); ?></option>
+													<option value="0"><?php _e('Ninguno'); ?></option>
 													<?php foreach ($users as $user) { echo "<option value='".$user['id']."'>".$user['name']."</option>"; } ?>
 												</select>
 											</div>
@@ -114,9 +114,9 @@
 										<div class="col-md-4">
 											<?php if($isAdmin) { ?>
 												<div class="form-group">
-													<label for="adminid"><?php _e('Asset Admin'); ?></label>
+													<label for="adminid"><?php _e('Administrador de activos'); ?></label>
 													<select class="form-control select2 select2-hidden-accessible" id="adminid" name="adminid" style="width: 100%;" tabindex="-1" aria-hidden="true">
-														<option value="0"><?php _e('None'); ?></option>
+														<option value="0"><?php _e('Ninguno'); ?></option>
 														<?php foreach ($admins as $admin) { echo "<option value='".$admin['id']."'>".$admin['name']."</option>"; } ?>
 													</select>
 												</div>
@@ -127,7 +127,7 @@
 
 										<div class="col-md-6">
 											<div class="form-group">
-												<label for="manufacturer"><?php _e('Manufacturer'); ?></label>
+												<label for="manufacturer"><?php _e('Manufacturero'); ?></label>
 												<select class="form-control select2tag select2-hidden-accessible" id="manufacturer" name="manufacturer" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple>
 													<?php foreach ($manufacturers as $manufacturer) { echo "<option value='".$manufacturer['name']."'>".$manufacturer['name']."</option>"; } ?>
 												</select>
@@ -136,7 +136,7 @@
 
 										<div class="col-md-6">
 											<div class="form-group">
-												<label for="model"><?php _e('Model'); ?></label>
+												<label for="model"><?php _e('Modelo'); ?></label>
 												<select class="form-control select2tag select2-hidden-accessible" id="model" name="model" style="width: 100%;" tabindex="-1" aria-hidden="true" multiple>
 													<?php foreach ($models as $model) { echo "<option value='".$model['name']."'>".$model['name']."</option>"; } ?>
 												</select>
@@ -146,7 +146,7 @@
 										<div class="col-md-12">
 											<?php if(getConfigValue("manual_qrvalue") == "true") { ?>
 												<div class="form-group">
-													<label for="qrvalue"><?php _e('QR Code Value'); ?></label>
+													<label for="qrvalue"><?php _e('Valor del código QR'); ?></label>
 													<input type="text" class="form-control" id="qrvalue" name="qrvalue">
 												</div>
 											<?php } else { ?><input type="hidden" name="qrvalue" value=""><?php } ?>
@@ -173,7 +173,7 @@
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
-												<label for="purchase_date"><?php _e('Purchase Date'); ?></label>
+												<label for="purchase_date"><?php _e('Fecha de compra'); ?></label>
 												<div class="input-group">
 													<input type="text" class="form-control" id="purchase_date" name="purchase_date">
 													<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -183,17 +183,17 @@
 
 										<div class="col-md-6">
 											<div class="form-group">
-												<label for="warranty_months"><?php _e('Warranty'); ?></label>
+												<label for="warranty_months"><?php _e('Garantía'); ?></label>
 												<div class="input-group">
 													<input type="number" class="form-control" id="warranty_months" name="warranty_months">
-													<span class="input-group-addon"><?php _e('months'); ?></span>
+													<span class="input-group-addon"><?php _e('meses'); ?></span>
 												</div>
 											</div>
 										</div>
 
 										<div class="col-md-12">
 											<div class="form-group">
-												<label for="serial"><?php _e('Serial Number'); ?></label>
+												<label for="serial"><?php _e('Numero de serie'); ?></label>
 												<input type="text" class="form-control" id="serial" name="serial">
 											</div>
 										</div>
@@ -233,14 +233,14 @@
 
 								<div class="col-md-12">
 									<div class="form-group">
-										<label for="notes"><?php _e('Notes'); ?></label>
+										<label for="notes"><?php _e('Notas'); ?></label>
 										<textarea class="form-control summernoteLarge" id="notes" name="notes"></textarea>
 									</div>
 								</div>
 
 								<div class="col-md-12">
 									<div class="form-group">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Create'); ?></button>
+										<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> <?php _e('Crear'); ?></button>
 									</div>
 								</div>
 
