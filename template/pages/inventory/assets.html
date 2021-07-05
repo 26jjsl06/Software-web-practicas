@@ -2,8 +2,8 @@
 <aside class="right-side">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
-			<h1 class="pull-left"><?php _e('Assets'); ?><small> <?php _e('Manage assets'); ?></small></h1>
-			<div class="pull-right"><?php if(in_array("addAsset",$perms)) { ?><a class="btn btn-primary btn-sm btn-flat" href="?route=inventory/assets/create"><?php _e('NEW ASSET'); ?></a><?php } ?></div>
+			<h1 class="pull-left"><?php _e('Activos'); ?><small> <?php _e('Gestionar activos'); ?></small></h1>
+			<div class="pull-right"><?php if(in_array("addAsset",$perms)) { ?><a class="btn btn-primary btn-sm btn-flat" href="?route=inventory/assets/create"><?php _e('NUEVO ACTIVO'); ?></a><?php } ?></div>
 			<div style="clear:both"></div>
 	</section>
 	<!-- Main content -->
@@ -19,13 +19,13 @@
 	                        <table id="dataTablesFull" class="table table-striped table-hover table-bordered">
 	                            <thead>
 	                                <tr>
-										<th><?php _e('Tag'); ?></th>
-										<th><?php _e('Category'); ?></th>
-										<th><?php _e('Asset Name'); ?></th>
-										<th><?php _e('Model'); ?></th>
-										<th><?php _e('Serial Number'); ?></th>
-										<th><?php _e('Related Entities'); ?></th>
-										<th><?php _e('Status'); ?></th>
+										<th><?php _e('Etiqueta'); ?></th>
+										<th><?php _e('Categoria'); ?></th>
+										<th><?php _e('Nombre del activo'); ?></th>
+										<th><?php _e('Modelo'); ?></th>
+										<th><?php _e('Número de serie'); ?></th>
+										<th><?php _e('Entidades relacionadas'); ?></th>
+										<th><?php _e('Estado'); ?></th>
 										<th class="text-right"></th>
 	                                </tr>
 	                            </thead>
@@ -64,8 +64,8 @@
 																<span class="caret"></span>
 															</button>
 															<ul class="dropdown-menu pull-right">
-																<?php if(in_array("deleteAsset",$perms)) { ?>	<li><a href='#' onClick='showM("?modal=assets/delete&reroute=inventory/assets&routeid=&id=<?php echo $asset['id']; ?>&section=");return false' ><i class='fa fa-trash-o fa-fw'></i><?php _e('Delete'); ?></a></li><?php } ?>
-																<li><a href="?route=pdf&type=assetlabel&id=<?php echo $asset['id']; ?>" target="_blank"><i class="fa fa-barcode fa-fw"></i><?php _e('Label'); ?></a></li>
+																<?php if(in_array("deleteAsset",$perms)) { ?>	<li><a href='#' onClick='showM("?modal=assets/delete&reroute=inventory/assets&routeid=&id=<?php echo $asset['id']; ?>&section=");return false' ><i class='fa fa-trash-o fa-fw'></i><?php _e('Eliminar'); ?></a></li><?php } ?>
+																<li><a href="?route=pdf&type=assetlabel&id=<?php echo $asset['id']; ?>" target="_blank"><i class="fa fa-barcode fa-fw"></i><?php _e('Etiqueta'); ?></a></li>
 															</ul>
 														</div>
 													

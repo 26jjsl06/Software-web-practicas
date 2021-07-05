@@ -1,22 +1,22 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Edit Category'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Editar categoria'); ?></h4></div>
 <div class="modal-body">
 
 
     <div class="form-group">
-        <label for="name"><?php _e('Name'); ?></label>
+        <label for="name"><?php _e('Nombre'); ?></label>
         <input type="text" class="form-control" id="name" name="name" value="<?php echo $kbcategory['name']; ?>" required>
     </div>
 
 
     <div class="form-group">
-        <label for="clients"><?php _e('Clients'); ?></label>
+        <label for="clients"><?php _e('Clientes'); ?></label>
         <select class="form-control select2tags" id="clients" name="clients[]" style="width: 100%;" multiple>
-            <option value="0" <?php if(in_array(0,$selectedClients)) echo "selected"; ?>><?php _e('ALL CLIENTS'); ?></option>
+            <option value="0" <?php if(in_array(0,$selectedClients)) echo "selected"; ?>><?php _e('TODOS LOS CLIENTES'); ?></option>
             <?php foreach ($clients as $client) { ?>
                 <option value='<?php echo $client['id']; ?>' <?php if(in_array($client['id'],$selectedClients)) echo "selected"; ?> ><?php echo $client['name']; ?></option>
             <?php } ?>
         </select>
-        <p class="help-block"><?php _e('Leave empty to hide.'); ?></p>
+        <p class="help-block"><?php _e('Dejar vacío para esconderse.'); ?></p>
     </div>
 
 
@@ -28,8 +28,8 @@
 
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> <?php _e('Save'); ?></button>
+    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> <?php _e('Guardar'); ?></button>
 </div>
 
 <script type="text/javascript">

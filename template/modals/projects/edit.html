@@ -1,16 +1,16 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Edit Project'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Editar proyecto'); ?></h4></div>
 <div class="modal-body">
 
     <div class="row">
         <div class="col-xs-4">
             <div class="form-group">
-                <label for="tag"><?php _e('Project Tag'); ?> *</label>
+                <label for="tag"><?php _e('Etiqueta del proyecto'); ?> *</label>
                 <input type="text" class="form-control" id="tag" name="tag" value="<?php echo $project['tag']; ?>" required>
             </div>
         </div>
         <div class="col-xs-8">
             <div class="form-group">
-                <label for="name"><?php _e('Project Name'); ?> *</label>
+                <label for="name"><?php _e('Nombre del proyecto'); ?> *</label>
                 <input type="text" class="form-control" id="name" name="name" value="<?php echo $project['name']; ?>" required>
             </div>
         </div>
@@ -18,9 +18,9 @@
 
     <?php if($isAdmin) { ?>
         <div class="form-group">
-            <label for="clientid"><?php _e('Client'); ?></label>
+            <label for="clientid"><?php _e('Cliente'); ?></label>
             <select class="form-control select2 select2-hidden-accessible" id="clientid" name="clientid" style="width: 100%;" tabindex="-1" aria-hidden="true">
-                <option value="0"><?php _e('None'); ?></option>
+                <option value="0"><?php _e('Ninguno'); ?></option>
                 <?php foreach ($clients as $client) { ?>
                     <option value='<?php echo $client['id']; ?>' <?php if($project['clientid'] == $client['id']) echo "selected"; ?>><?php echo $client['name']; ?></option>
                 <?php } ?>
@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-xs-6">
             <div class="form-group">
-                <label for="startdate"><?php _e('Start Date'); ?></label>
+                <label for="startdate"><?php _e('Fecha de inicio'); ?></label>
                 <div class="input-group">
                     <input type="text" class="form-control" id="startdate" name="startdate" value="<?php echo $project['startdate']; ?>">
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -41,7 +41,7 @@
         </div>
         <div class="col-xs-6">
             <div class="form-group">
-                <label for="deadline"><?php _e('Due Date'); ?></label>
+                <label for="deadline"><?php _e('Fecha de vencimiento'); ?></label>
                 <div class="input-group">
                     <input type="text" class="form-control" id="deadline" name="deadline" value="<?php echo dateDisplay($project['deadline']); ?>">
                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="form-group">
-        <div class="checkbox"><label><input type="checkbox" class="sliderToggle" name="issuesprogress" value="true" <?php if($project['progress'] == -1) echo "checked"; ?>> <?php _e('Calculate progress through tasks'); ?></label></div>
+        <div class="checkbox"><label><input type="checkbox" class="sliderToggle" name="issuesprogress" value="true" <?php if($project['progress'] == -1) echo "checked"; ?>> <?php _e('Calcular el progreso a través de las tareas.'); ?></label></div>
     </div>
 
 
@@ -60,7 +60,7 @@
     <br>
 
     <div class="form-group">
-        <label for="description" class="control-label"><?php _e('Description'); ?></label>
+        <label for="description" class="control-label"><?php _e('Descripcion'); ?></label>
         <textarea class="form-control summernote-modal" id="description" name="description"><?php echo $project['description']; ?></textarea>
     </div>
 
@@ -71,8 +71,8 @@
     <input type="hidden" name="section" value="<?php echo $_GET['section']; ?>">
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-success btn-flat"><i class="fa fa-save"></i> <?php _e('Save'); ?></button>
+    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-success btn-flat"><i class="fa fa-save"></i> <?php _e('Guardar'); ?></button>
 </div>
 
 <script type="text/javascript">

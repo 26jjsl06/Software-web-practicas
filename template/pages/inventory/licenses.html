@@ -2,8 +2,8 @@
 <aside class="right-side">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
-			<h1 class="pull-left"><?php _e('Licenses'); ?><small> <?php _e('Manage licenses'); ?></small></h1>
-			<div class="pull-right"><?php if(in_array("addLicense",$perms)) { ?><a class="btn btn-primary btn-sm btn-flat" href="?route=inventory/licenses/create"><?php _e('NEW LICENSE'); ?></a><?php } ?></div>
+			<h1 class="pull-left"><?php _e('Licencias'); ?><small> <?php _e('Administrar licencias'); ?></small></h1>
+			<div class="pull-right"><?php if(in_array("addLicense",$perms)) { ?><a class="btn btn-primary btn-sm btn-flat" href="?route=inventory/licenses/create"><?php _e('NUEVA LICENCIA'); ?></a><?php } ?></div>
 			<div style="clear:both"></div>
 	</section>
 	<!-- Main content -->
@@ -19,13 +19,13 @@
 	                        <table id="dataTablesFull" class="table table-striped table-hover table-bordered">
 	                            <thead>
 	                                <tr>
-										<th><?php _e('Tag'); ?></th>
-										<th><?php _e('Category'); ?></th>
+										<th><?php _e('Etiqueta'); ?></th>
+										<th><?php _e('Categoria'); ?></th>
 
-										<th><?php _e('Name'); ?></th>
-										<th><?php _e('Seats'); ?></th>
-										<th><?php _e('Client'); ?></th>
-										<th><?php _e('Status'); ?></th>
+										<th><?php _e('Nombre'); ?></th>
+										<th><?php _e('Asientos'); ?></th>
+										<th><?php _e('Cliente'); ?></th>
+										<th><?php _e('Estado'); ?></th>
 										<th class="text-right"></th>
 	                                </tr>
 	                            </thead>
@@ -70,8 +70,8 @@
 																	<span class="caret"></span>
 																</button>
 																<ul class="dropdown-menu pull-right">
-																	<?php if(in_array("deleteLicense",$perms)) { ?>	<li><a href='#' onClick='showM("?modal=licenses/delete&reroute=inventory/licenses&routeid=&id=<?php echo $license['id']; ?>&section=");return false' ><i class='fa fa-trash-o fa-fw'></i><?php _e('Delete'); ?></a></li><?php } ?>
-																	<li><a href="?route=pdf&type=licenselabel&id=<?php echo $license['id']; ?>" target="_blank"><i class="fa fa-barcode fa-fw"></i><?php _e('Label'); ?></a></li>
+																	<?php if(in_array("deleteLicense",$perms)) { ?>	<li><a href='#' onClick='showM("?modal=licenses/delete&reroute=inventory/licenses&routeid=&id=<?php echo $license['id']; ?>&section=");return false' ><i class='fa fa-trash-o fa-fw'></i><?php _e('Eliminar'); ?></a></li><?php } ?>
+																	<li><a href="?route=pdf&type=licenselabel&id=<?php echo $license['id']; ?>" target="_blank"><i class="fa fa-barcode fa-fw"></i><?php _e('Etiqueta'); ?></a></li>
 																</ul>
 														</div>
 													

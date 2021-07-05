@@ -1,8 +1,8 @@
-<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Add Staff Account'); ?></h4></div>
+<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title"><?php _e('Agregar cuenta de personal'); ?></h4></div>
 <div class="modal-body">
 
     <div class="form-group">
-        <label for="roleid"><?php _e('Role'); ?></label>
+        <label for="roleid"><?php _e('Rol'); ?></label>
         <select class="form-control select2 select2-hidden-accessible" id="roleid" name="roleid" style="width: 100%;" tabindex="-1" aria-hidden="true">
             <?php foreach ($roles as $role) { ?>
                 <option value='<?php echo $role['id']; ?>'><?php echo $role['name']; ?></option>
@@ -11,7 +11,7 @@
     </div>
 
     <div class="form-group">
-        <label for="name"><?php _e('Name'); ?> *</label>
+        <label for="name"><?php _e('Nombre'); ?> *</label>
         <input type="text" class="form-control" id="name" name="name" autocomplete="off" required>
     </div>
 
@@ -19,17 +19,17 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="email"><?php _e('Email Address'); ?> *</label>
+                <label for="email"><?php _e('Dirección de correo electrónico'); ?> *</label>
                 <input type="email" class="form-control" id="email" name="email" autocomplete="off" required>
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="password"><?php _e('Password'); ?> *</label>
+                <label for="password"><?php _e('Contraseña'); ?> *</label>
                 <div class="input-group">
                     <input type="text" class="form-control passwordinput" id="password" name="password" autocomplete="off" required>
-                    <span class="input-group-btn"><button type="button" class="btn btn-default btn-flat getNewPass" data-toggle='tooltip' title='<?php _e('Generate password'); ?>'><i class="fa fa-refresh"></i></button></span>
+                    <span class="input-group-btn"><button type="button" class="btn btn-default btn-flat getNewPass" data-toggle='tooltip' title='<?php _e('Generar contraseña'); ?>'><i class="fa fa-refresh"></i></button></span>
                 </div>
             </div>
         </div>
@@ -40,14 +40,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="mobile"><?php _e('Mobile Number'); ?></label>
+                <label for="mobile"><?php _e('Número de teléfono'); ?></label>
                 <input type="text" class="form-control" id="mobile" autocomplete="off" name="mobile">
             </div>
         </div>
 
         <div class="col-md-6">
             <div class="form-group">
-                <label for="title"><?php _e('Job Title'); ?></label>
+                <label for="title"><?php _e('Título profesional'); ?></label>
                 <input type="text" class="form-control" id="title" name="title" autocomplete="off">
             </div>
         </div>
@@ -56,7 +56,7 @@
 
     <?php if(getConfigValue("ldap_enable") == "true") { ?>
         <div class="form-group">
-            <label for="ldap_user"><?php _e('LDAP/AD Username'); ?></label>
+            <label for="ldap_user"><?php _e('Nombre de usuario LDAP / AD'); ?></label>
             <input type="text" class="form-control" id="ldap_user" name="ldap_user" autocomplete="off">
         </div>
     <?php } else { ?>
@@ -66,7 +66,7 @@
 
 
 
-    <div class="form-group"><div class="checkbox"><label><input type="checkbox" name="notification" value="true" checked="yes"> <?php _e('Send new staff account email notification'); ?></label></div></div>
+    <div class="form-group"><div class="checkbox"><label><input type="checkbox" name="notification" value="true" checked="yes"> <?php _e('Enviar una notificación por correo electrónico de la nueva cuenta del personal'); ?></label></div></div>
     <input type="hidden" name="action" value="addAdmin">
     <input type="hidden" name="route" value="<?php echo $_GET['reroute']; ?>">
     <input type="hidden" name="routeid" value="">
@@ -74,8 +74,8 @@
 
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancel'); ?></button>
-    <button type="submit" class="btn btn-primary btn-flat"><i class="fa fa-check"></i> <?php _e('Create'); ?></button>
+    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal"><i class="fa fa-times"></i> <?php _e('Cancelar'); ?></button>
+    <button type="submit" class="btn btn-primary btn-flat"><i class="fa fa-check"></i> <?php _e('Crear'); ?></button>
 </div>
 
 <script type="text/javascript">
