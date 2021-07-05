@@ -21,39 +21,39 @@
 								<div class="col-md-6">
 
 									<div class="form-group">
-										<label for="name"><?php _e('Name'); ?> *</label>
+										<label for="name"><?php _e('Nombre'); ?> *</label>
 										<input type="text" class="form-control" id="name" name="name" value="<?php echo $liu['name']; ?>" required>
 									</div>
 
 									<div class="form-group">
-										<label for="email"><?php _e('Email Address'); ?> *</label>
+										<label for="email"><?php _e('Dirección de correo electrónico'); ?> *</label>
 										<input type="email" class="form-control" id="email" name="email" value="<?php echo $liu['email']; ?>" required>
 									</div>
 
 									<div class="form-group">
-										<label for="mobile"><?php _e('Mobile Number'); ?></label>
+										<label for="mobile"><?php _e('Número de teléfono móvil'); ?></label>
 										<input type="text" class="form-control" id="mobile" name="mobile" value="<?php echo $liu['mobile']; ?>">
 									</div>
 
 									<div class="form-group">
-										<label for="title"><?php _e('Job Title'); ?></label>
+										<label for="title"><?php _e('Título profesional'); ?></label>
 										<input type="text" class="form-control" id="title" value="<?php echo $liu['title']; ?>" autocomplete="off" name="title">
 									</div>
 
 									<div class="form-group">
-										<label for="password"><?php _e('Change Password'); ?></label>
+										<label for="password"><?php _e('Cambiar la contraseña'); ?></label>
 										<input type="password" class="form-control" id="password" name="password" placeholder="<?php _e('Enter only if you want to change'); ?>">
 									</div>
 
 									<div class="form-group">
-										<label for="signature"><?php _e('Signature'); ?></label>
+										<label for="signature"><?php _e('Firma'); ?></label>
 										<textarea class="form-control" id="signature" rows="3" name="signature"><?php echo $liu['signature']; ?></textarea>
 									</div>
 
 									<div class="form-group">
-										<label for="password"><?php _e('Confirm Password'); ?></label>
+										<label for="password"><?php _e('Confirmar Contraseña'); ?></label>
 										<input type="password" class="form-control" id="confirmpassword" name="confirmpassword" required>
-										<p class="help-block"><?php _e('Please confirm your current password to make changes to your profile.'); ?></p>
+										<p class="help-block"><?php _e('Confirme su contraseña actual para realizar cambios en su perfil.'); ?></p>
 									</div>
 
 								</div>
@@ -61,7 +61,7 @@
 								<div class="col-md-6">
 
 									<div class="form-group">
-										<label for="lang"><?php _e('Language'); ?></label>
+										<label for="lang"><?php _e('Idioma'); ?></label>
 										<select class="form-control select2 select2-hidden-accessible" id="lang" name="lang" style="width: 100%;" tabindex="-1" aria-hidden="true">
 											<?php foreach ($languages as $language) { ?>
 												<option <?php if($liu['lang'] == $language['code']) echo 'selected'; ?> value="<?php echo $language['code']; ?>"><?php echo $language['name']; ?></option>
@@ -71,9 +71,9 @@
 
 									<?php if($isAdmin) { ?>
 										<div class="form-group">
-											<label for="ticketsnotification"><?php _e('Receive Tickets Notifications'); ?></label>
+											<label for="ticketsnotification"><?php _e('Recibir notificaciones de entradas'); ?></label>
 											<select class="form-control select2 select2-hidden-accessible" id="ticketsnotification" name="ticketsnotification" style="width: 100%;" tabindex="-1" aria-hidden="true">
-												<option value="1" <?php if($liu['ticketsnotification']=="1") echo "selected"; ?>><?php _e('Yes'); ?></option>
+												<option value="1" <?php if($liu['ticketsnotification']=="1") echo "selected"; ?>><?php _e('Si'); ?></option>
 												<option value="0" <?php if($liu['ticketsnotification']=="0") echo "selected"; ?>><?php _e('No'); ?></option>
 											</select>
 										</div>
@@ -81,37 +81,37 @@
 									<?php if(!$isAdmin) { ?><input type="hidden" name="ticketsnotification" value="0"><?php } ?>
 
 									<div class="form-group">
-										<label for="theme"><?php _e('Theme'); ?></label>
+										<label for="theme"><?php _e('Tema'); ?></label>
 										<select class="form-control select2 select2-hidden-accessible" id="theme" name="theme" style="width: 100%;" tabindex="-1" aria-hidden="true">
-											<option value="skin-blue" <?php if($liu['theme']=="skin-blue") echo "selected"; ?>><?php _e('Blue'); ?></option>
-											<option value="skin-black" <?php if($liu['theme']=="skin-black") echo "selected"; ?>><?php _e('Black'); ?></option>
-											<option value="skin-purple" <?php if($liu['theme']=="skin-purple") echo "selected"; ?>><?php _e('Purple'); ?></option>
-											<option value="skin-green" <?php if($liu['theme']=="skin-green") echo "selected"; ?>><?php _e('Green'); ?></option>
-											<option value="skin-red" <?php if($liu['theme']=="skin-red") echo "selected"; ?>><?php _e('Red'); ?></option>
-											<option value="skin-yellow" <?php if($liu['theme']=="skin-yellow") echo "selected"; ?>><?php _e('Yellow'); ?></option>
-											<option value="skin-blue-light" <?php if($liu['theme']=="skin-blue-light") echo "selected"; ?>><?php _e('Blue Light'); ?></option>
-											<option value="skin-black-light" <?php if($liu['theme']=="skin-black-light") echo "selected"; ?>><?php _e('Black Light'); ?></option>
-											<option value="skin-purple-light" <?php if($liu['theme']=="skin-purple-light") echo "selected"; ?>><?php _e('Purple Light'); ?></option>
-											<option value="skin-green-light" <?php if($liu['theme']=="skin-green-light") echo "selected"; ?>><?php _e('Green Light'); ?></option>
-											<option value="skin-red-light" <?php if($liu['theme']=="skin-red-light") echo "selected"; ?>><?php _e('Red Light'); ?></option>
-											<option value="skin-yellow-light" <?php if($liu['theme']=="skin-yellow-light") echo "selected"; ?>><?php _e('Yellow Light'); ?></option>
+											<option value="skin-blue" <?php if($liu['theme']=="skin-blue") echo "selected"; ?>><?php _e('Azul'); ?></option>
+											<option value="skin-black" <?php if($liu['theme']=="skin-black") echo "selected"; ?>><?php _e('Negro'); ?></option>
+											<option value="skin-purple" <?php if($liu['theme']=="skin-purple") echo "selected"; ?>><?php _e('Morado'); ?></option>
+											<option value="skin-green" <?php if($liu['theme']=="skin-green") echo "selected"; ?>><?php _e('Verde'); ?></option>
+											<option value="skin-red" <?php if($liu['theme']=="skin-red") echo "selected"; ?>><?php _e('Rojo'); ?></option>
+											<option value="skin-yellow" <?php if($liu['theme']=="skin-yellow") echo "selected"; ?>><?php _e('Amarillo'); ?></option>
+											<option value="skin-blue-light" <?php if($liu['theme']=="skin-blue-light") echo "selected"; ?>><?php _e('Luz azul'); ?></option>
+											<option value="skin-black-light" <?php if($liu['theme']=="skin-black-light") echo "selected"; ?>><?php _e('Luz negra'); ?></option>
+											<option value="skin-purple-light" <?php if($liu['theme']=="skin-purple-light") echo "selected"; ?>><?php _e('Luz púrpura'); ?></option>
+											<option value="skin-green-light" <?php if($liu['theme']=="skin-green-light") echo "selected"; ?>><?php _e('Luz verde'); ?></option>
+											<option value="skin-red-light" <?php if($liu['theme']=="skin-red-light") echo "selected"; ?>><?php _e('Luz roja'); ?></option>
+											<option value="skin-yellow-light" <?php if($liu['theme']=="skin-yellow-light") echo "selected"; ?>><?php _e('Luz amarilla'); ?></option>
 										</select>
 									</div>
 
 									<div class="form-group">
-										<label for="sidebar"><?php _e('Sidebar'); ?></label>
+										<label for="sidebar"><?php _e('Barra lateral'); ?></label>
 										<select class="form-control select2 select2-hidden-accessible" id="sidebar" name="sidebar" style="width: 100%;" tabindex="-1" aria-hidden="true">
-											<option value="opened" <?php if($liu['sidebar']=="opened") echo "selected"; ?>><?php _e('Opened'); ?></option>
-											<option value="collapsed" <?php if($liu['sidebar']=="collapsed") echo "selected"; ?>><?php _e('Collapsed'); ?></option>
+											<option value="opened" <?php if($liu['sidebar']=="opened") echo "selected"; ?>><?php _e('Abierta'); ?></option>
+											<option value="collapsed" <?php if($liu['sidebar']=="collapsed") echo "selected"; ?>><?php _e('Colapsada'); ?></option>
 										</select>
 									</div>
 
 									<div class="form-group">
-										<label for="layout"><?php _e('Layout'); ?></label>
+										<label for="layout"><?php _e('Diseño'); ?></label>
 										<select class="form-control select2 select2-hidden-accessible" id="layout" name="layout" style="width: 100%;" tabindex="-1" aria-hidden="true">
-											<option value="" <?php if($liu['layout']== "") echo "selected"; ?>><?php _e('Standard'); ?></option>
-											<option value="fixed" <?php if($liu['layout']=="fixed") echo "selected"; ?>><?php _e('Fixed'); ?></option>
-											<option value="layout-boxed" <?php if($liu['layout']=="layout-boxed") echo "selected"; ?>><?php _e('Boxed'); ?></option>
+											<option value="" <?php if($liu['layout']== "") echo "selected"; ?>><?php _e('Estándar'); ?></option>
+											<option value="fixed" <?php if($liu['layout']=="fixed") echo "selected"; ?>><?php _e('Reparada'); ?></option>
+											<option value="layout-boxed" <?php if($liu['layout']=="layout-boxed") echo "selected"; ?>><?php _e('En caja'); ?></option>
 										</select>
 									</div>
 
@@ -120,15 +120,15 @@
 									<div class="form-group">
 										<label for="avatar"><?php _e('Avatar'); ?></label>
 											<input type="file" name="avatar" accept="image/jpeg">
-											<p class="help-block"><?php _e('Square JPG image only, recommended size: 128x128px.'); ?></p>
-											<p><a href="?qa=removeAvatar"><?php _e('Remove Avatar Image'); ?></a></p>
+											<p class="help-block"><?php _e('Solo imagen cuadrada JPG, tamaño recomendado: 128x128px.'); ?></p>
+											<p><a href="?qa=removeAvatar"><?php _e('Eliminar imagen de avatar'); ?></a></p>
 									</div>
 
 								</div>
 
 								<div class="col-md-12">
 									<div class="form-group">
-										<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> <?php _e('Save'); ?></button>
+										<button type="submit" class="btn btn-success"><i class="fa fa-save"></i> <?php _e('Guardar'); ?></button>
 									</div>
 								</div>
 
